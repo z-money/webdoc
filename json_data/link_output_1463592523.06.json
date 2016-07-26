@@ -1,0 +1,37 @@
+{
+    "checked_links": [
+        "http://www.zacharydeannorman.com", 
+        "about.html", 
+        "http://www.zacharydeannorman.com/about.html", 
+        "http://www.everythingiscollective.com", 
+        "http://www.jajajaspace.com", 
+        "http://zacharynorman.tumblr.com", 
+        "http://jaclynrwright.com/", 
+        "http://www.everythingiscollective.com/", 
+        "http://www.latitudechicago.org/news/2016/3/31/conversation-reciprocity-failure-imagining-the-cosmos-in-art-and-science", 
+        "http://www.baxterst.org/programs-2/zine-fair/the-6th-annual-zine-and-self-published-photo-book-fair/", 
+        "http://www.anoukkruithof.nl/", 
+        "http://jajajaspace.com/fixedtarget.html", 
+        "http://timothyearlneill.com/", 
+        "http://www.cpw.org/current/common-senses/", 
+        "http://laartbookfair.net/", 
+        "http://royalnonesuchgallery.com/index.php?/archive/echo-decoy-limit/", 
+        "http://www.filterfestival.com/portfolio/full-empty/", 
+        "1.html", 
+        "http://www.zacharydeannorman.com/1.html", 
+        "fullempty.html", 
+        "http://www.zacharydeannorman.com/fullempty.html", 
+        "http://www.everythingiscollective.com/do3.html", 
+        "exotic.html", 
+        "http://www.zacharydeannorman.com/exotic.html", 
+        "eiae.html", 
+        "http://www.zacharydeannorman.com/eiae.html"
+    ], 
+    "bad_links": [
+        {
+            "status_code": 301, 
+            "link": "http://www.cpw.org/current/common-senses/", 
+            "page": "http://www.zacharydeannorman.com/about.html"
+        }
+    ]
+}
