@@ -3,7 +3,7 @@ from lxml import html
 import json
 
 base_url = 'http://www.birthtools.org'
-all_links = {base_url: None}
+all_links = {base_url: {'status':None,'page':'root'}}
 
 def get_page_links(url):
 	page = requests.get(url)
@@ -43,24 +43,28 @@ def check_link(link):
 
 def unchecked_links(links):
 	for link in links:
-		if(links[link] is None):
+		if(links[link]['status'] is None):
 			return True
 	return False
 
-def merge_links(links, new_links):
+def merge_links(links, new_links, link):
 	for new_link in new_links:
 		if new_link not in links:
-			links[new_link] = None
+
+			links[new_link] = {
+				'status':None,
+				'page':link
+			}
 	return links
 
 def check_links(links, base_url):
 	while(unchecked_links(links)):
 		for link in list(links):
-			if(links[link] == None):
-				links[link] = check_link(link)
-				if(links[link] is not None and (links[link][0] == '2' or links[link][0] == '3') and 'birthtools.org' in link and '/files/' not in link):
+			if(links[link]['status'] == None):
+				links[link]['status'] = check_link(link)
+				if(links[link]['status'] is not None and (links[link]['status'][0] == '2' or links[link]['status'][0] == '3') and 'birthtools.org' in link and '/files/' not in link):
 					new_links = clean_page_links(get_page_links(link), base_url)
-					links = merge_links(links, new_links)
+					links = merge_links(links, new_links, link)
 		print(links)
 	return links
 
